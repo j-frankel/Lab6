@@ -15,13 +15,16 @@ def main():
     while user_choice != 3:
         try:
             if user_choice == 1:
-                list_pass = input("Please enter your password to encode: ")
-                list_pass = list_pass.split()
+                input_string_pass = input("Please enter your password to encode: ")
+                list_pass = []
+                for i in input_string_pass:
+                    list_pass.append(i)
+                encoded_list = []
                 for i in list_pass:
                     i = int(i)
                     i += 3
-                    return i
-                encoded = ''.join(list_pass)
+                    encoded_list.append(i)
+                encoded = ''.join(encoded_list)
                 print("Your password has been encoded and stored!")
                 print(encoded)
         except:
