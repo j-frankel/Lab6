@@ -22,9 +22,10 @@ def encode(input_string_pass):
             encoded_list.append(i)
         encoded = ''.join(encoded_list)
         print("Your password has been encoded and stored!")
-        return encoded
+        return input_string_pass, encoded
     except:
         print("Error")
+
 
 def main():
 
@@ -40,8 +41,14 @@ def main():
         user_choice = int(input("\nPlease enter an option: "))
 
         if user_choice == 1:
-            encode(input("Please enter your password to encode: "))
+           input_string_pass, encoded =  encode(input("Please enter your password to encode: "))
+
+        elif user_choice == 2:
+            
+            print(f'The encoded password is {encoded}, and the original password is {input_string_pass}.')
         
+        elif user_choice == 3:
+            break
 
 
     
