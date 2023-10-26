@@ -4,20 +4,11 @@ Jacob F & Alex F
 
 '''
 
-def menu(): 
-    user_choice = None
-    print("Menu",
-   "------------",
-   "1. Encode",
-   "2. Decode",
-   "3. Quit", sep='\n')
-    user_choice = int(input("\nPlease enter an option: "))
-    return user_choice
 
-def encode():
+def encode(input_string_pass):
             
     try:
-        input_string_pass = input("Please enter your password to encode: ")
+        
         list_pass = []
 
         for i in input_string_pass:
@@ -37,10 +28,20 @@ def encode():
 
 def main():
 
+    user_choice = None
     
-    while  != 3:
+    while user_choice != 3:
         
-        if 
+        print("Menu",
+        "------------",
+        "1. Encode",
+        "2. Decode",
+        "3. Quit", sep='\n')
+        user_choice = int(input("\nPlease enter an option: "))
+
+        if user_choice == 1:
+            encode(input("Please enter your password to encode: "))
+        
 
 
     
