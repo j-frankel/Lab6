@@ -4,7 +4,6 @@ Jacob F & Alex F
 
 '''
 
-
 def encode(input_string_pass):
             
     try:
@@ -32,6 +31,13 @@ def encode(input_string_pass):
         print("Error")
 
 
+def decode(input_string_pass, encoded):
+    try:
+        print(f'The encoded password is {encoded}, and the original password is {input_string_pass}.')
+    except:
+        print("There was an error...")
+        
+
 def main():
 
     user_choice = None
@@ -49,7 +55,7 @@ def main():
            input_string_pass, encoded =  encode(input("Please enter your password to encode: "))
 
         elif user_choice == 2:
-            print(f'The encoded password is {encoded}, and the original password is {input_string_pass}.')
+           decode(input_string_pass, encoded) 
             
         elif user_choice == 3:
             break
