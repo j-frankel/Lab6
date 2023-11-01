@@ -3,7 +3,7 @@ Lab 6
 Jacob F & Alex F
 
 '''
-
+#encodes the password
 def encode(input_string_pass):
             
     try:
@@ -30,14 +30,14 @@ def encode(input_string_pass):
 
         print("Error")
 
-
+#decodes the password
 def decode(input_string_pass, encoded):
     try:
         print(f'The encoded password is {encoded}, and the original password is {input_string_pass}.')
     except:
         print("There was an error...")
         
-
+#executes the program
 def main():
 
     user_choice = None
